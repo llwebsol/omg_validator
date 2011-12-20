@@ -11,4 +11,4 @@ module OmgValidator
   end
 end
 
-ActiveRecord::Validations::NumericValidator = OmgValidator::Validators::NumericValidator
+ActiveModel::Validations::NumericValidator = OmgValidator::Validators::NumericValidator

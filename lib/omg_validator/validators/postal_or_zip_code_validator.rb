@@ -11,4 +11,4 @@ module OmgValidator
   end
 end
 
-ActiveRecord::Validations::PostalOrZipCodeValidator = OmgValidator::Validators::PostalOrZipCodeValidator
+ActiveModel::Validations::PostalOrZipCodeValidator = OmgValidator::Validators::PostalOrZipCodeValidator

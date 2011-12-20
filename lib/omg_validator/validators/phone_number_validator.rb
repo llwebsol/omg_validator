@@ -11,4 +11,4 @@ module OmgValidator
   end
 end
 
-ActiveRecord::Validations::PhoneNumberValidator = OmgValidator::Validators::PhoneNumberValidator
+ActiveModel::Validations::PhoneNumberValidator = OmgValidator::Validators::PhoneNumberValidator
