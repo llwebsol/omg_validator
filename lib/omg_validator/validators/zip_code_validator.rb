@@ -1,0 +1,14 @@
+module OmgValidator
+  module Validators
+    class ZipCodeValidator < ActiveModel::EachValidator
+      def validate_each(record, attribute, value)
+        reg = /^\d{5}(-\d{4})?$/i
+        unless reg.match(value)
+          record.errors[attribute] = "must be a valid zip code"
+        end
+      end
+    end
+  end
+end
+
+ActiveRecord::Validations::ZipCodeValidator = OmgValidator::Validators::ZipCodeValidator
