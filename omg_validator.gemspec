@@ -5,9 +5,9 @@ require "omg_validator/version"
 Gem::Specification.new do |s|
   s.name        = "omg_validator"
   s.version     = OmgValidator::VERSION
-  s.authors     = ["Nickolas Kenyeres"]
-  s.email       = ["nick@landlordwebsolutions.com"]
-  s.homepage    = "http://www.landlordwebsolutions.com"
+  s.authors     = ["Nickolas Kenyeres", "Michael Mottola"]
+  s.email       = ["nkenyeres@gmail.com", "mikemottola@gmail.com"]
+  s.homepage    = "https://github.com/llwebsol"
   s.summary     = %q{A bunch of Rails validators to extend ActiveModel}
   s.description = %q{A bunch of Rails validators to extend ActiveModel}
 
