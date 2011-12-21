@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omg_validator (0.0.2)
+    omg_validator (0.0.3)
       activemodel
 
 GEM
