@@ -1,5 +1,9 @@
 module OmgValidator
   module Validators
+    # Checks whether password input is a strong password
+    # Must contain a least one number, one lower case letter and one upper case letter
+    #
+    # validates :password, strong_password: true
     class StrongPasswordValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?

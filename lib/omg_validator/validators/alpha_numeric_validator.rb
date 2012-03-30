@@ -1,5 +1,8 @@
 module OmgValidator
   module Validators
+    # Checks whether input only contains alpha-numberic characters
+    #
+    # validates :title, alpha_numberic: true
     class AlphaNumericValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?

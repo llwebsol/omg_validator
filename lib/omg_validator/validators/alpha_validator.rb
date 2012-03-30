@@ -1,5 +1,8 @@
 module OmgValidator
   module Validators
+    # Checks whether input only contains alphabetic characters
+    #
+    # validates :name, alpha: true
     class AlphaValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?

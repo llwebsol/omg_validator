@@ -1,5 +1,8 @@
 module OmgValidator
   module Validators
+    # Checks whether input is a valid number
+    #
+    # validates :count, number: true
     class NumericValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?

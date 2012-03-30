@@ -1,5 +1,8 @@
 module OmgValidator
   module Validators
+    # Checks whether input is a valid postal code or a valid zip code
+    #
+    # validates :zip_code, postal_or_zip_code: true
     class PostalOrZipCodeValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?
