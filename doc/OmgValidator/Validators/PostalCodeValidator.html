@@ -94,7 +94,22 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Checks whether input is a valid postal code
+</p>
+<p>
+validates :postal_code, postal_code: true
+</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
   
 
@@ -153,16 +168,16 @@
       <pre class="lines">
 
 
-4
-5
-6
 7
 8
 9
-10</pre>
+10
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/omg_validator/validators/postal_code_validator.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/omg_validator/validators/postal_code_validator.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_validate_each'>validate_each</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='comma'>,</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -181,7 +196,7 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Mar 30 10:12:20 2012 by 
+  Generated on Fri Mar 30 10:49:14 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.4 (ruby-1.9.2).
 </div>

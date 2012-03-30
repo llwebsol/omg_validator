@@ -1,6 +1,8 @@
 require "omg_validator/version"
 
+# OMG Validator
 module OmgValidator
+  # Validators
   module Validators
     # Nothing to do here...
   end
