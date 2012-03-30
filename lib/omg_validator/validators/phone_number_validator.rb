@@ -1,5 +1,9 @@
 module OmgValidator
   module Validators
+    # Checks whether input is a valid phone number
+    # Currently only supports American and Canadian formats
+    #
+    # validates :phone, phone_number: true
     class PhoneNumberValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?

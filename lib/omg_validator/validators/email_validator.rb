@@ -1,5 +1,8 @@
 module OmgValidator
   module Validators
+    # Checks whether input is a valid email address
+    #
+    # validates :email, email: true
     class EmailValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?

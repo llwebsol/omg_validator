@@ -1,5 +1,8 @@
 module OmgValidator
   module Validators
+    # Checks whether input is a valid floating point number
+    #
+    # validates :total_value, decimal: true
     class DecimalValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?

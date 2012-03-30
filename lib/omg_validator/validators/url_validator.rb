@@ -1,5 +1,9 @@
 module OmgValidator
   module Validators
+    # Checks whether input is a valid URL
+    # Supports the protocols: http, https and ftp
+    #
+    # validates :url, url: true
     class UrlValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?
