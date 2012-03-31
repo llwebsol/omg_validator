@@ -4,6 +4,7 @@ class OmgValidatorTest < ActiveSupport::TestCase
   def setup
     @thing = nil
     @thing = Thing.new({
+      alpha: Things.alphas[:valid].sample,
       alpha_numeric: Things.alpha_numerics[:valid].sample,
       alpha_dash: Things.alpha_dashes[:valid].sample,
       zip_code: Things.zip_codes[:valid].sample,
