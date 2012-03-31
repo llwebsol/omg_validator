@@ -1,15 +1,44 @@
 class Things
-  def self.postal_code
+  def self.alpha_dashes
     {
-      valid: "L2J 4T5",
-      invalid: "LL2J 4T5"
+      valid: [
+          "azqy",
+          "az-qy",
+          "AZ-qy",
+          "01-qy",
+          "01_qy",
+          "01001",
+          "-----"
+        ],
+      invalid: [
+          "#",
+          " ",
+          "az qy",
+          "az#qy",
+          "01 qy",
+          "01#qy"
+        ]
     }
   end
   
-  def self.zip_code
+  def self.alpha_numerics
     {
-      valid: "90210",
-      invalid: "902100"
+      valid: [
+          "azqy",
+          "az99",
+          "AZqy",
+          "AZQY",
+          "AZ99",
+          "0099"
+        ],
+      invalid: [
+          "a qy",
+          "a-qy",
+          "a_qy",
+          "a#qy",
+          "A9-y",
+          "9 99"
+        ]
     }
   end
   
