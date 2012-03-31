@@ -19,6 +19,20 @@ class OmgValidatorTest < ActiveSupport::TestCase
     assert_kind_of Module, OmgValidator
   end
   
+  test "thing should be invalid if alpha contains non-alpha characters" do
+    Things.alphas[:invalid].each do |alpha|
+      @thing.alpha = alpha 
+      assert !@thing.valid?, "#{alpha} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+  
+  test "thing should be valid if alpha contains only alpha characters" do
+    Things.alphas[:valid].each do |alpha|
+      @thing.alpha = alpha
+      assert @thing.valid?, "#{alpha} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+  
   test "thing should be invalid if alpha_numeric contains non-alpha-numeric characters" do
     Things.alpha_numerics[:invalid].each do |alpha_numeric|
       @thing.alpha_numeric = alpha_numeric

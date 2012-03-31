@@ -1,4 +1,23 @@
 class Things
+  def self.alphas 
+    {
+      valid: [
+          "a",
+          "aZ",
+          "AZ",
+          "az"
+        ],
+      invalid: [
+          "0",
+          "9",
+          "a z",
+          "A_z",
+          "A-Z",
+          "a0z"
+        ] 
+    }
+  end
+  
   def self.alpha_dashes
     {
       valid: [
