@@ -1,5 +1,5 @@
 class Things
-  def self.alphas 
+  def self.alphas
     {
       valid: [
           "a",
@@ -14,10 +14,10 @@ class Things
           "A_z",
           "A-Z",
           "a0z"
-        ] 
+        ]
     }
   end
-  
+
   def self.alpha_dashes
     {
       valid: [
@@ -39,7 +39,7 @@ class Things
         ]
     }
   end
-  
+
   def self.alpha_numerics
     {
       valid: [
@@ -60,7 +60,7 @@ class Things
         ]
     }
   end
-  
+
   def self.postal_codes
     {
       valid: [
@@ -76,7 +76,7 @@ class Things
         ]
     }
   end
-  
+
   def self.zip_codes
     {
       valid: [

@@ -2,15 +2,16 @@ require 'active_model'
 
 class Thing
   include ActiveModel::Validations
-  
-  attr_accessor :alpha, :alpha_numeric, :alpha_dash, :zip_code, :postal_or_zip_code
-  
+
+  attr_accessor :alpha, :alpha_numeric, :alpha_dash, :zip_code, :postal_or_zip_code, :postal_code
+
   validates :alpha, alpha: true
   validates :alpha_numeric, alpha_numeric: true
   validates :alpha_dash, alpha_dash: true
   validates :zip_code, zip_code: true
   validates :postal_or_zip_code, postal_or_zip_code: true
-  
+  validates :postal_code, postal_code: true
+
   def initialize(options = {})
     @alpha = options[:alpha] unless options[:alpha].nil?
     @alpha_numeric = options[:alpha_numeric] unless options[:alpha_numeric].nil?
