@@ -201,4 +201,19 @@ class OmgValidatorTest < ActiveSupport::TestCase
       assert !@thing.valid?, "#{url} - #{@thing.errors.full_messages.join("\n")}"
     end
   end
+
+  # phone number
+  test "thing should be valid if phone is a valid phone number" do
+    Things.phone_numbers[:valid].each do |phone|
+      @thing.phone = phone
+      assert @thing.valid?, "#{phone} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  test "thing should be invalid if phone is not a valid phone number" do
+    Things.phone_numbers[:invalid].each do |phone|
+      @thing.phone = phone
+      assert !@thing.valid?, "#{phone} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
 end
