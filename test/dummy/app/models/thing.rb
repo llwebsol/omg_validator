@@ -3,7 +3,8 @@ require 'active_model'
 class Thing
   include ActiveModel::Validations
 
-  attr_accessor :alpha, :alpha_numeric, :alpha_dash, :zip_code, :postal_or_zip_code, :postal_code
+  attr_accessor :alpha, :alpha_numeric, :alpha_dash, :zip_code, :postal_or_zip_code, :postal_code,
+    :decimal, :integer, :numeric
 
   validates :alpha, alpha: true
   validates :alpha_numeric, alpha_numeric: true
@@ -11,6 +12,9 @@ class Thing
   validates :zip_code, zip_code: true
   validates :postal_or_zip_code, postal_or_zip_code: true
   validates :postal_code, postal_code: true
+  validates :decimal, decimal: true
+  validates :integer, integer: true
+  validates :numeric, numeric: true
 
   def initialize(options = {})
     @alpha = options[:alpha] unless options[:alpha].nil?

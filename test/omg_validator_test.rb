@@ -97,6 +97,7 @@ class OmgValidatorTest < ActiveSupport::TestCase
     end
   end
 
+  # postal code
   test "thing should be valid if postal_code is a valid postal code" do
     Things.postal_codes[:valid].each do |code|
       @thing.postal_code = code
@@ -108,6 +109,51 @@ class OmgValidatorTest < ActiveSupport::TestCase
     Things.postal_codes[:invalid].each do |code|
       @thing.postal_code = code
       assert !@thing.valid?, "#{code} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  # decimals
+  test "thing should be valid if decimal is a valid decimal" do
+    Things.decimals[:valid].each do |decimal|
+      @thing.decimal = decimal
+      assert @thing.valid?, "#{decimal} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  test "thing should be invalid if decimal is not a valid decimal" do
+    Things.decimals[:invalid].each do |decimal|
+      @thing.decimal = decimal
+      assert !@thing.valid?, "#{decimal} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  # integer
+  test "thing should be valid if integer is a valid integer" do
+    Things.integers[:valid].each do |integer|
+      @thing.integer = integer
+      assert @thing.valid?, "#{integer} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  test "thing should be invalid if integer is not a valid integer" do
+    Things.integers[:invalid].each do |integer|
+      @thing.integer = integer
+      assert !@thing.valid?, "#{integer} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  # numeric
+  test "thing should be valid if numeric is a valid numeric" do
+    Things.numeric[:valid].each do |numeric|
+      @thing.numeric = numeric
+      assert @thing.valid?, "#{numeric} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  test "thing should be invalid if numeric is not a valid numeric" do
+    Things.numeric[:invalid].each do |numeric|
+      @thing.numeric = numeric
+      assert !@thing.valid?, "#{numeric} - #{@thing.errors.full_messages.join("\n")}"
     end
   end
 end

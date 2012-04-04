@@ -96,7 +96,7 @@ class Things
   def self.decimals
     {
         valid: [
-            "10",
+            "10.00",
             "23.23",
             "1.23",
             "100.00"
