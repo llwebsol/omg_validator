@@ -216,4 +216,19 @@ class OmgValidatorTest < ActiveSupport::TestCase
       assert !@thing.valid?, "#{phone} - #{@thing.errors.full_messages.join("\n")}"
     end
   end
+
+  # strong password
+  test "thing should be valid if password is a valid strong password" do
+    Things.strong_passwords[:valid].each do |password|
+      @thing.password = password
+      assert @thing.valid?, "#{password} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  test "thing should be invalid if password is not a valid strong password" do
+    Things.strong_passwords[:invalid].each do |password|
+      @thing.password = password
+      assert !@thing.valid?, "#{password} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
 end
