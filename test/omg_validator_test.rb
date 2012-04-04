@@ -20,6 +20,7 @@ class OmgValidatorTest < ActiveSupport::TestCase
     assert_kind_of Module, OmgValidator
   end
 
+  # alpha
   test "thing should be invalid if alpha contains non-alpha characters" do
     Things.alphas[:invalid].each do |alpha|
       @thing.alpha = alpha
@@ -34,12 +35,14 @@ class OmgValidatorTest < ActiveSupport::TestCase
     end
   end
 
+  # alpha numeric
   test "thing should be invalid if alpha_numeric contains non-alpha-numeric characters" do
     Things.alpha_numerics[:invalid].each do |alpha_numeric|
       @thing.alpha_numeric = alpha_numeric
       assert !@thing.valid?, "#{alpha_numeric} - #{@thing.errors.full_messages.join("\n")}"
     end
   end
+
 
   test "thing should be valid if alpha_numeric contains only alpha-numeric characters" do
     Things.alpha_numerics[:valid].each do |alpha_numeric|
@@ -48,6 +51,7 @@ class OmgValidatorTest < ActiveSupport::TestCase
     end
   end
 
+  # alpha dash
   test "thing should be invalid if alpha_dash contains non-alpha-numeric-dashes characters" do
     Things.alpha_dashes[:invalid].each do |alpha_dash|
       @thing.alpha_dash = alpha_dash
@@ -69,6 +73,7 @@ class OmgValidatorTest < ActiveSupport::TestCase
     end
   end
 
+  # zip code
   test "thing should be invalid if zip_code is not a valid zip_code" do
     Things.zip_codes[:invalid].each do |zip|
       @thing.zip_code = zip
@@ -83,6 +88,7 @@ class OmgValidatorTest < ActiveSupport::TestCase
     end
   end
 
+  # postal or zip code
   test "thing should be invalid if postal_or_zip_code is not a valid postal or zip code" do
     Things.postal_codes[:invalid].concat(Things.zip_codes[:invalid]).each do |zip_or_postal|
       @thing.postal_or_zip_code = zip_or_postal
