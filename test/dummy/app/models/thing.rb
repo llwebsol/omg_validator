@@ -4,7 +4,7 @@ class Thing
   include ActiveModel::Validations
 
   attr_accessor :alpha, :alpha_numeric, :alpha_dash, :zip_code, :postal_or_zip_code, :postal_code,
-    :decimal, :integer, :numeric, :email, :ip_address, :url, :phone, :password
+    :decimal, :integer, :numeric, :email, :ip_address, :url, :phone, :password, :date
 
   validates :alpha, alpha: true
   validates :alpha_numeric, alpha_numeric: true
@@ -20,6 +20,7 @@ class Thing
   validates :url, url: true
   validates :phone, phone_number: true
   validates :password, strong_password: true
+  validates :date, date: true
 
   def initialize(options = {})
     @alpha = options[:alpha] unless options[:alpha].nil?

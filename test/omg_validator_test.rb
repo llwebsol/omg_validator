@@ -231,4 +231,19 @@ class OmgValidatorTest < ActiveSupport::TestCase
       assert !@thing.valid?, "#{password} - #{@thing.errors.full_messages.join("\n")}"
     end
   end
+
+  # date
+  test "thing should be valid if date is a valid date" do
+    Things.dates[:valid].each do |date|
+      @thing.date = date
+      assert @thing.valid?, "#{date} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  test "thing should be invalid if date is not a valid date" do
+    Things.dates[:invalid].each do |date|
+      @thing.date = date
+      assert !@thing.valid?, "#{date} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
 end

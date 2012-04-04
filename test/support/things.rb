@@ -93,6 +93,23 @@ class Things
     }
   end
 
+  def self.dates
+    {
+        valid: [
+            "2012-04-23",
+            "04-05-2012",
+            "April 4 2012",
+            "Wednesday May 10, 2010"
+        ],
+        invalid: [
+            "210-09-09",
+            "2012-13-05",
+            "Maypril 5, 2012",
+            "23223232",
+        ]
+    }
+  end
+
   def self.decimals
     {
         valid: [
