@@ -93,7 +93,7 @@ class Things
     }
   end
 
-  def self.decimal
+  def self.decimals
     {
         valid: [
             "10",
@@ -110,7 +110,7 @@ class Things
     }
   end
 
-  def self.email
+  def self.emails
     {
         valid: [
         "user@domain.com",
@@ -127,7 +127,7 @@ class Things
     }
   end
 
-  def self.integer
+  def self.integers
     {
         valid: [
             "10",
@@ -144,7 +144,7 @@ class Things
     }
   end
 
-  def self.ip_address
+  def self.ip_addresses
     {
         valid: [
             "120.20.123.123",
@@ -161,7 +161,7 @@ class Things
     }
   end
 
-  def self.decimal
+  def self.numeric
     {
         valid: [
             "10",
@@ -178,7 +178,7 @@ class Things
     }
   end
 
-  def self.phone_number
+  def self.phone_numbers
     {
         valid: [
             "123-123-1240",
@@ -196,7 +196,7 @@ class Things
     }
   end
 
-  def self.strong_password
+  def self.strong_passwords
     {
         valid: [
             "ASdj3j3jsS",
@@ -214,7 +214,7 @@ class Things
     }
   end
 
-  def self.url
+  def self.urls
     {
         valid: [
             "http://example.com",
