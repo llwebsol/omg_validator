@@ -2,7 +2,7 @@ module OmgValidator
   module Validators
     # Checks whether input is a valid IP Address
     #
-    # validates :ip_address, ip_address: true
+    # validates :ip_address, ip_adress: true
     class IpAddressValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?

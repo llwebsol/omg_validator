@@ -156,4 +156,49 @@ class OmgValidatorTest < ActiveSupport::TestCase
       assert !@thing.valid?, "#{numeric} - #{@thing.errors.full_messages.join("\n")}"
     end
   end
+
+  # email
+  test "thing should be valid if email is a valid email" do
+    Things.emails[:valid].each do |email|
+      @thing.email = email
+      assert @thing.valid?, "#{email} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  test "thing should be invalid if email is not a valid email" do
+    Things.emails[:invalid].each do |email|
+      @thing.email = email
+      assert !@thing.valid?, "#{email} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  # ip address
+  test "thing should be valid if ip_address is a valid ip address" do
+    Things.ip_addresses[:valid].each do |ip|
+      @thing.ip_address = ip
+      assert @thing.valid?, "#{ip} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  test "thing should be invalid if ip_address is not a valid ip address" do
+    Things.ip_addresses[:invalid].each do |ip|
+      @thing.ip_address = ip
+      assert !@thing.valid?, "#{ip} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  # url
+  test "thing should be valid if url is a valid url" do
+    Things.urls[:valid].each do |url|
+      @thing.url = url
+      assert @thing.valid?, "#{url} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
+
+  test "thing should be invalid if url is not a valid url" do
+    Things.urls[:invalid].each do |url|
+      @thing.url = url
+      assert !@thing.valid?, "#{url} - #{@thing.errors.full_messages.join("\n")}"
+    end
+  end
 end

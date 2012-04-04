@@ -122,7 +122,7 @@ class Things
         "mail@you@rock.com",
         "myemailaddress.com",
         "myemailaddress",
-        "amasd@asd.com.a",
+        "amasd@asd.com.a.",
     ]
     }
   end
