@@ -234,11 +234,11 @@ class Things
   def self.urls
     {
         valid: [
-            "http://example.com",
+            "http://www.example.com",
             "www.example.com",
             "example.com",
-            "sub.example.com",
-            "sub.example.com?id=3423",
+            "http://www.example.com",
+            "sub.example.com"
         ],
         invalid: [
             "@asd.com",

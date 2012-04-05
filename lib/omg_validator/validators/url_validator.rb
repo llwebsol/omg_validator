@@ -7,7 +7,7 @@ module OmgValidator
     class UrlValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?
-        reg = '`.*?((http|ftp|https)://[\w#$&+,\/:;=?@.-]+)[^\w#$&+,\/:;=?@.-]*?`i'
+        reg = /^((https?):\/\/)?([a-z\d]+([\-\.][a-z\d]+)*\.[a-z]{2,6})((:(\d{1,5}))?(\/.*)?)?$/
         unless reg.match(value)
           record.errors[attribute] = "must be a valid url"
         end
