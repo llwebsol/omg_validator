@@ -4,7 +4,10 @@ module OmgValidator
     # Supports the protocols: http, https and ftp
     #
     # validates :url, url: true
-    class UrlValidator < ActiveModel::EachValidator
+    #
+    # matches: http://www.example.com, www.example.com, example.com, sub.example.com
+    # does not match: @asd.com, domain.c, domain.asd., amasd@asd.com.a
+  class UrlValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?
         reg = /^((https?):\/\/)?([a-z\d]+([\-\.][a-z\d]+)*\.[a-z]{2,6})((:(\d{1,5}))?(\/.*)?)?$/

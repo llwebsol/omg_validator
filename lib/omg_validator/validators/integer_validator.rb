@@ -3,6 +3,9 @@ module OmgValidator
     # Checks whether input is a valid integer
     #
     # validates :count, integer: true
+    #
+    # matches: 10, 20, 2323, -20, 10000000,
+    # does not match: 10.50, -22.21, 1,000, ten
     class IntegerValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?

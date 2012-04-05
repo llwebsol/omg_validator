@@ -3,6 +3,9 @@ module OmgValidator
     # Checks whether input is a valid postal code
     #
     # validates :postal_code, postal_code: true
+    #
+    # matches: L2J 4T5, l2a 9d1, h2o 4g1, h2o4g1
+    # does not match: z2n 1n3, aan 2j2, LL2J 4T5, 5j4 f1d
     class PostalCodeValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?

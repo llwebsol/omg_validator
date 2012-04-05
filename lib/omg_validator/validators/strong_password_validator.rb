@@ -4,6 +4,9 @@ module OmgValidator
     # Must contain a least one number, one lower case letter and one upper case letter and must be at least 8 characters
     #
     # validates :password, strong_password: true
+    #
+    # matches: ASdj3j3jsS, 8#adCje3, pwd#fdJa9, To34zNbsr30,
+    # does not match: password, sdfsdfs3, Jsdsdsdj, G3hn$h
     class StrongPasswordValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.nil?
