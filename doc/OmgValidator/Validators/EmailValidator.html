@@ -6,7 +6,7 @@
 <title>
   Class: OmgValidator::Validators::EmailValidator
   
-    &mdash; Documentation by YARD 0.7.4
+    &mdash; Documentation by YARD 0.7.5
   
 </title>
 
@@ -102,6 +102,10 @@ Checks whether input is a valid email address
 <p>
 validates :email, email: true
 </p>
+<p>
+matches: email@domain.com, my_user@domain.edu.org, sub.domain@ohyeah.com,
+does not match: mail@you@rock.com, domain.com
+</p>
 
 
   </div>
@@ -111,10 +115,10 @@ validates :email, email: true
 
 </div>
 
-  
 
 
-  
+
+
 
   
     <h2>
@@ -168,20 +172,20 @@ validates :email, email: true
       <pre class="lines">
 
 
-7
-8
-9
 10
 11
 12
-13</pre>
+13
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/omg_validator/validators/email_validator.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/omg_validator/validators/email_validator.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_validate_each'>validate_each</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='comma'>,</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-  <span class='id identifier rubyid_reg'>reg</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z</span><span class='regexp_end'>/</span></span>
+  <span class='id identifier rubyid_reg'>reg</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$</span><span class='regexp_end'>/</span></span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_reg'>reg</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute'>attribute</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>must be a valid email address</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
@@ -196,9 +200,9 @@ validates :email, email: true
 </div>
     
     <div id="footer">
-  Generated on Fri Mar 30 11:50:31 2012 by 
+  Generated on Thu Apr  5 00:05:42 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.4 (ruby-1.9.2).
+  0.7.5 (ruby-1.9.2).
 </div>
 
   </body>

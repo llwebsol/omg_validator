@@ -6,7 +6,7 @@
 <title>
   Class: OmgValidator::Validators::AlphaDashValidator
   
-    &mdash; Documentation by YARD 0.7.4
+    &mdash; Documentation by YARD 0.7.5
   
 </title>
 
@@ -102,6 +102,10 @@ Checks whether input only contains alpha-numberic characters and dashes
 <p>
 validates :perma_link, alpha_dash: true
 </p>
+<p>
+matches: alpha-dash-23, ll2-ada, 343, Dfsdf, -, does not match: $10.00,
+sub.domain, id=343, (232)
+</p>
 
 
   </div>
@@ -111,10 +115,10 @@ validates :perma_link, alpha_dash: true
 
 </div>
 
-  
 
 
-  
+
+
 
   
     <h2>
@@ -168,16 +172,16 @@ validates :perma_link, alpha_dash: true
       <pre class="lines">
 
 
-7
-8
-9
 10
 11
 12
-13</pre>
+13
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/omg_validator/validators/alpha_dash_validator.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/omg_validator/validators/alpha_dash_validator.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_validate_each'>validate_each</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='comma'>,</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -196,9 +200,9 @@ validates :perma_link, alpha_dash: true
 </div>
     
     <div id="footer">
-  Generated on Fri Mar 30 11:50:31 2012 by 
+  Generated on Thu Apr  5 00:05:42 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.4 (ruby-1.9.2).
+  0.7.5 (ruby-1.9.2).
 </div>
 
   </body>
