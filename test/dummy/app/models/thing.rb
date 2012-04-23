@@ -23,10 +23,20 @@ class Thing
   validates :date, date: true
 
   def initialize(options = {})
-    @alpha = options[:alpha] unless options[:alpha].nil?
-    @alpha_numeric = options[:alpha_numeric] unless options[:alpha_numeric].nil?
-    @alpha_dash = options[:alpha_dash] unless options[:alpha_dash].nil?
-    @zip_code = options[:zip_code] unless options[:zip_code].nil?
-    @postal_or_zip_code = options[:postal_or_zip_code] unless options[:postal_or_zip_code].nil?
+    @alpha = nil
+    @alpha_numeric = nil
+    @alpha_dash = nil
+    @zip_code = nil
+    @postal_or_zip_code = nil
+    @postal_code = nil
+    @decimal = nil
+    @integer = nil
+    @numeric = nil
+    @email = nil
+    @ip_address = nil
+    @url = nil
+    @phone = nil
+    @password = nil
+    @date = nil
   end
 end

@@ -8,7 +8,7 @@ module OmgValidator
     # does not match: 324-343, alpha-dash, id=343, (232)
     class AlphaNumericValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
-        return nil if value.nil?
+        return nil if value.blank?
         reg = /^([a-z0-9])+$/i
         unless reg.match(value)
           record.errors[attribute] = "must contain only alpha-numeric characters"

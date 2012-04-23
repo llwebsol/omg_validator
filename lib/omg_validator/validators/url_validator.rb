@@ -9,7 +9,7 @@ module OmgValidator
     # does not match: @asd.com, domain.c, domain.asd., amasd@asd.com.a
   class UrlValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
-        return nil if value.nil?
+        return nil if value.blank?
         reg = /^((https?):\/\/)?([a-z\d]+([\-\.][a-z\d]+)*\.[a-z]{2,6})((:(\d{1,5}))?(\/.*)?)?$/
         unless reg.match(value)
           record.errors[attribute] = "must be a valid url"

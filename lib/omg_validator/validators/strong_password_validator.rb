@@ -9,7 +9,7 @@ module OmgValidator
     # does not match: password, sdfsdfs3, Jsdsdsdj, G3hn$h
     class StrongPasswordValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
-        return nil if value.nil?
+        return nil if value.blank?
         reg = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
         unless reg.match(value)
           record.errors[attribute] = "must contain at least a number, a lower case letter, a upper case letter and must be at least 8 characters"

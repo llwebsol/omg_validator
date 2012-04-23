@@ -5,7 +5,9 @@ class Things
           "a",
           "aZ",
           "AZ",
-          "az"
+          "az",
+          "",
+          nil
         ],
       invalid: [
           "0",
@@ -27,7 +29,9 @@ class Things
           "01-qy",
           "01_qy",
           "01001",
-          "-----"
+          "-----",
+          "",
+          nil
         ],
       invalid: [
           "#",
@@ -48,7 +52,9 @@ class Things
           "AZqy",
           "AZQY",
           "AZ99",
-          "0099"
+          "0099",
+          "",
+          nil
         ],
       invalid: [
           "a qy",
@@ -66,7 +72,9 @@ class Things
       valid: [
           "L2J 4T5",
           "l2j 4t5",
-          "l2j4t5"
+          "l2j4t5",
+          "",
+          nil
         ],
       invalid: [
           "L2%4T5",
@@ -81,7 +89,9 @@ class Things
     {
       valid: [
           "90210",
-          "20037-8001"
+          "20037-8001",
+          "",
+          nil
         ],
       invalid: [
           "9021",
@@ -99,7 +109,9 @@ class Things
             "2012-04-23",
             "04-05-2012",
             "April 4 2012",
-            "Wednesday May 10, 2010"
+            "Wednesday May 10, 2010",
+            "",
+            nil
         ],
         invalid: [
             "210-09-09",
@@ -116,7 +128,9 @@ class Things
             "10.00",
             "23.23",
             "1.23",
-            "100.00"
+            "100.00",
+            "",
+            nil
         ],
         invalid: [
             "20..00",
@@ -132,7 +146,9 @@ class Things
         valid: [
         "user@domain.com",
         "my_user@domain.on.ca",
-        "mail@hoemail.net"
+        "mail@hoemail.net",
+        "",
+        nil
     ],
         invalid: [
         "@asd.com",
@@ -150,7 +166,9 @@ class Things
             "10",
             "23",
             "154",
-            "134256"
+            "134256",
+            "",
+            nil
         ],
         invalid: [
             "20..00",
@@ -167,7 +185,9 @@ class Things
             "120.20.123.123",
             "255.255.255.0",
             "127.0.0.1",
-            "100.1.123.254"
+            "100.1.123.254",
+            "",
+            nil
         ],
         invalid: [
             "2.0.0.0.0",
@@ -184,7 +204,9 @@ class Things
             "10",
             "23.23",
             "1.23",
-            "100.00"
+            "100.00",
+            "",
+            nil
         ],
         invalid: [
             "20..00",
@@ -201,7 +223,9 @@ class Things
             "123-123-1240",
             "123-123-0123",
             "1905-232-2323",
-            "1-905-232-2323"
+            "1-905-232-2323",
+            "",
+            nil
         ],
         invalid: [
             "1323-23-123",
@@ -219,7 +243,9 @@ class Things
             "ASdj3j3jsS",
             "8#adCje30",
             "To34zNbsr30",
-            "pwd#fdJa9"
+            "pwd#fdJa9",
+            "",
+            nil
         ],
         invalid: [
             "password",
@@ -238,7 +264,9 @@ class Things
             "www.example.com",
             "example.com",
             "http://www.example.com",
-            "sub.example.com"
+            "sub.example.com",
+            "",
+            nil
         ],
         invalid: [
             "@asd.com",

@@ -5,7 +5,7 @@ module OmgValidator
     # validates :posting_date, date: true
     class DateValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
-        return nil if value.nil?
+        return nil if value.blank?
         begin
           Date.parse(value)
         rescue

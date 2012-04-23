@@ -8,7 +8,7 @@ module OmgValidator
     # does not match: mail@you@rock.com, domain.com
     class EmailValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
-        return nil if value.nil?
+        return nil if value.blank?
         reg = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$/
         unless reg.match(value)
           record.errors[attribute] = "must be a valid email address"

@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = OmgValidator::VERSION
   s.authors     = ["Nickolas Kenyeres", "Michael Mottola"]
   s.email       = ["nkenyeres@gmail.com", "mikemottola@gmail.com"]
-  s.homepage    = "https://github.com/llwebsol"
+  s.homepage    = "http://llwebsol.github.com/omg_validator/"
   s.summary     = %q{A bunch of Rails validators to extend ActiveModel}
   s.description = %q{A bunch of Rails validators to extend ActiveModel}
 

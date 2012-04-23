@@ -8,7 +8,7 @@ module OmgValidator
     # does not match: 123456, 20037-001, 207-01
     class ZipCodeValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
-        return nil if value.nil?
+        return nil if value.blank?
         reg = /^\d{5}(-\d{4})?$/i
         unless reg.match(value)
           record.errors[attribute] = "must be a valid zip code"

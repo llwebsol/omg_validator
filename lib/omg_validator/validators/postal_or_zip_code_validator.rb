@@ -8,7 +8,7 @@ module OmgValidator
     # does not match: z2n 1n3, aan 2j2, LL2J 4T5, 123456, 20037-001, 207-01
     class PostalOrZipCodeValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
-        return nil if value.nil?
+        return nil if value.blank?
         reg = /(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$)/i
         unless reg.match(value)
           record.errors[attribute] = "must be a valid postal or zip code"

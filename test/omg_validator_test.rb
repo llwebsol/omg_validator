@@ -2,14 +2,7 @@ require 'test_helper'
 
 class OmgValidatorTest < ActiveSupport::TestCase
   def setup
-    @thing = nil
-    @thing = Thing.new({
-                           alpha: Things.alphas[:valid].sample,
-                           alpha_numeric: Things.alpha_numerics[:valid].sample,
-                           alpha_dash: Things.alpha_dashes[:valid].sample,
-                           zip_code: Things.zip_codes[:valid].sample,
-                           postal_or_zip_code: Things.postal_codes[:valid].sample
-                       })
+    @thing = Thing.new
   end
 
   def teardown
@@ -43,14 +36,13 @@ class OmgValidatorTest < ActiveSupport::TestCase
     end
   end
 
-
   test "thing should be valid if alpha_numeric contains only alpha-numeric characters" do
     Things.alpha_numerics[:valid].each do |alpha_numeric|
       @thing.alpha_numeric = alpha_numeric
       assert @thing.valid?, "#{alpha_numeric} - #{@thing.errors.full_messages.join("\n")}"
     end
   end
-
+  
   # alpha dash
   test "thing should be invalid if alpha_dash contains non-alpha-numeric-dashes characters" do
     Things.alpha_dashes[:invalid].each do |alpha_dash|
@@ -207,7 +199,7 @@ class OmgValidatorTest < ActiveSupport::TestCase
       assert !@thing.valid?, "#{url} - #{@thing.errors.full_messages.join("\n")}"
     end
   end
-
+  
   # phone number
   test "thing should be valid if phone is a valid phone number" do
     Things.phone_numbers[:valid].each do |phone|
