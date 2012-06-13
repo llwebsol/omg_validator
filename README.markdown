@@ -19,7 +19,7 @@ OmgValidator is a collection of custom validators for Rails 3.x. These are simpl
 
 Using the gem is easy. Just add it to your gemfile.
 
-  gem "omg_validator", "~> 0.0.4"
+  gem "omg_validator", "~> 0.0.8"
 
 Run bundle install and then use them in your models. For example:
 
