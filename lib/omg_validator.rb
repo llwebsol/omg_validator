@@ -10,6 +10,7 @@ end
 
 require "omg_validator/validators/alpha_dash_validator"
 require "omg_validator/validators/alpha_numeric_validator"
+require "omg_validator/validators/alpha_numeric_dash_validator"
 require "omg_validator/validators/alpha_validator"
 require "omg_validator/validators/date_validator"
 require "omg_validator/validators/decimal_validator"
