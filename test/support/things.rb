@@ -16,4 +16,8 @@ class Things
   def alpha_numeric_dash
     @config['alpha_numeric_dash']
   end
+
+  def decimal
+    @config['decimal']
+  end
 end
