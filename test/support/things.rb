@@ -28,4 +28,8 @@ class Things
   def integer
     @config['integer']
   end
+
+  def ip_address
+    @config['ip_address']
+  end
 end
