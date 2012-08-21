@@ -73,3 +73,16 @@ decimal:
     - hello
     - .
     - $
+
+email:
+  valid:
+    - 'j@abc.com'
+    - 'john@abc.ca'
+    - 'john.appleseed@abc.co.uk'
+    - 'j123@appleseed.de'
+  invalid:
+    - '@abc.com'
+    - 'john@abc'
+    - 'abc.com'
+    - 'john.appleseed'
+    - 'john@appleseed@abc.com'

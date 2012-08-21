@@ -20,4 +20,8 @@ class Things
   def decimal
     @config['decimal']
   end
+
+  def email
+    @config['email']
+  end
 end
