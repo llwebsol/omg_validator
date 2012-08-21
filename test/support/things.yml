@@ -1,0 +1,43 @@
+alpha_dash:
+  valid:
+    - a
+    - abcdefghijklmnopqrstuvwxyz
+    - helloWorld
+    - hello-world
+    - hello_world
+    - -----------
+    - ___________
+  invalid:
+    - $
+    - 1
+    - 1234567890
+    - hell0Wor1d
+    - hello world
+
+alpha_numeric:
+  valid:
+    - a
+    - abcdefghijklmnopqrstuvwxyz
+    - helloWorld
+    - helloWor1d
+    - 1
+    - 1234567890
+  invalid:
+    - $
+    - hello-world
+    - hello_world
+    - hello world
+
+alpha_numeric_dash:
+  valid:
+    - a
+    - abcdefghijklmnopqrstuvwxyz
+    - helloWorld
+    - helloWor1d
+    - hello-world
+    - hello_wor1d
+    - 1
+    - 1234567890
+  invalid:
+    - $
+    - hello world
