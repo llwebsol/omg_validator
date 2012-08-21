@@ -24,4 +24,8 @@ class Things
   def email
     @config['email']
   end
+
+  def integer
+    @config['integer']
+  end
 end

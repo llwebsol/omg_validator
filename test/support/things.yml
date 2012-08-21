@@ -86,3 +86,18 @@ email:
     - 'abc.com'
     - 'john.appleseed'
     - 'john@appleseed@abc.com'
+
+integer:
+  valid:
+    - 0
+    - 1
+    - -1
+    - 1001
+    - 100,000,000
+  invalid:
+    - 0.999
+    - .0009
+    - abcdefghijklmnopqrstuvwxyz
+    - $
+    - --------
+    - ________
