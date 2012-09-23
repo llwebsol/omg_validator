@@ -59,21 +59,6 @@ alpha_numeric_dash:
     - $
     - hello world
 
-decimal:
-  valid:
-    - 0.1
-    - 100.0
-    - 100.100
-    - .999999
-  invalid:
-    - 0
-    - 100
-    - 100.0.0
-    - a
-    - hello
-    - .
-    - $
-
 email:
   valid:
     - 'j@abc.com'

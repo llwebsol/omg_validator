@@ -17,10 +17,6 @@ class Things
     @config['alpha_numeric_dash']
   end
 
-  def decimal
-    @config['decimal']
-  end
-
   def email
     @config['email']
   end
