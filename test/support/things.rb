@@ -5,6 +5,10 @@ class Things
     @config = YAML.load_file("#{File.dirname(__FILE__)}/things.yml")
   end
 
+  def alpha
+    @config['alpha']
+  end
+
   def alpha_dash
     @config['alpha_dash']
   end
