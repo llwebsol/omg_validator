@@ -3,10 +3,14 @@ module OmgValidator
     # Checks whether password input is a strong password
     # Must contain a least one number, one lower case letter and one upper case letter and must be at least 8 characters
     #
-    # validates :password, strong_password: true
+    # @example
+    #   validates :password, strong_password: true
     #
-    # matches: ASdj3j3jsS, 8#adCje3, pwd#fdJa9, To34zNbsr30,
-    # does not match: password, sdfsdfs3, Jsdsdsdj, G3hn$h
+    # Matches:
+    #   ASdj3j3jsS, 8#adCje3, pwd#fdJa9, To34zNbsr30,
+    #
+    # Does not match:
+    #   password, sdfsdfs3, Jsdsdsdj, G3hn$h
     class StrongPasswordValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.blank?

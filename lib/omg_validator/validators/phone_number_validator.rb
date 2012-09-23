@@ -3,10 +3,14 @@ module OmgValidator
     # Checks whether input is a valid phone number
     # Currently only supports American and Canadian formats
     #
-    # validates :phone, phone_number: true
+    # @example
+    #   validates :phone, phone_number: true
     #
-    # matches: 2342343423, 1-800-232-1232, 100-232-2322, 1905-232-2323,
-    # does not match: 3434343434343, 333333333, 905-232-23239, (111) 232-2322
+    # Matches:
+    #   2342343423, 1-800-232-1232, 100-232-2322, 1905-232-2323
+    #
+    # Does not match:
+    #   3434343434343, 333333333, 905-232-23239, (111) 232-2322
     class PhoneNumberValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.blank?

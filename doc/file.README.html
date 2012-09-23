@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.7.5
+    &mdash; Documentation by YARD 0.8.2.1
   
 </title>
 
@@ -15,9 +15,11 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  if (relpath != '') relpath += '/';
+  framesUrl = "frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
@@ -26,34 +28,39 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <a href="_index.html">Index</a> &raquo; 
     <span class="title">File: README</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><div id='filecontents'><h1>OmgValidator</h1>
 
 <p>OmgValidator is a collection of custom validators for Rails 3.x. These are simple validators that mostly use regular expressions for common validation requirements, including:</p>
@@ -63,11 +70,8 @@
 <li>Alphanumeric characters</li>
 <li>Alpha characters</li>
 <li>Dates</li>
-<li>Decimal numbers</li>
 <li>Email addresses</li>
-<li>Integer numbers</li>
 <li>IP addresses</li>
-<li>Numeric characters</li>
 <li>US and Canadian (or compatible) Phone numbers</li>
 <li>US and Canadian (or compatible) Postal/Zip Codes</li>
 <li>Strong passwords</li>
@@ -75,17 +79,16 @@
 <li>US (or compatible) Zip Code</li>
 </ul>
 
+
 <p>Using the gem is easy. Just add it to your gemfile.</p>
 
-<p>gem &quot;omg_validator&quot;, &quot;~&gt; 0.0.4&quot;</p>
+<p>  gem "omg_validator", "~> 0.0.8"</p>
 
 <p>Run bundle install and then use them in your models. For example:</p>
 
-<p>validates :postal<em>code, postal</em>or<em>zip</em>code: true</p>
+<p>  validates :postal_code, postal_or_zip_code: true</p>
 
-<p>Think of this package as a swiss army knife for your validation needs. It larges replaces the need to use validates<em>format</em>of validation helper method. </p>
-
-<p>The decimal, integer, and numeric validators do overlap with functionality in the validates<em>numericality</em>of validation helper method. We have kept these in the gem however, as we personally find them easier to use. The validates<em>numericality</em>of method is still immensely useful for more complex numeric validations.</p>
+<p>Think of this package as a swiss army knife for your validation needs. It larges replaces the need to use validates_format_of validation helper method.</p>
 
 <h3>Contributors</h3>
 
@@ -94,29 +97,30 @@
 <li>Michael Mottola</li>
 </ul>
 
+
 <h3>How to Contribute</h3>
 
 <p>This project is in active development. We are using it in real world projects; some parts work well, and others need more work. In other words; test it before using it.</p>
 
-<p>We released it hoping that others would find it useful. We encourage you to fork the project and improve on it. We would be most gracious if you send a pull request with your modifications. We will include you in the list of contributors unless you request to not be listed. </p>
+<p>We released it hoping that others would find it useful. We encourage you to fork the project and improve on it. We would be most gracious if you send a pull request with your modifications. We will include you in the list of contributors unless you request to not be listed.</p>
 
-<p>The source code for this project is here: <a href="https://github.com/llwebsol/OmgValidators">https://github.com/llwebsol/OmgValidators</a>. </p>
+<p>The source code for this project is here: <a href="https://github.com/llwebsol/OmgValidators.">https://github.com/llwebsol/OmgValidators.</a></p>
 
 <h3>License</h3>
 
 <p>Copyright (c) 2011-2012 Nickolas Kenyeres, Michael Mottola.</p>
 
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 
 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 
-<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div></div>
-    
+
     <div id="footer">
-  Generated on Thu Apr  5 00:05:42 2012 by 
+  Generated on Sun Sep 23 13:47:00 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.5 (ruby-1.9.2).
+  0.8.2.1 (ruby-1.9.3).
 </div>
 
   </body>

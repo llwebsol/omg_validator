@@ -2,7 +2,14 @@ module OmgValidator
   module Validators
     # Checks whether input only contains alpha characters and dashes.
     #
-    # validates :perma_link, alpha_dash: true
+    # @example
+    #  validates :perma_link, alpha_dash: true
+    #
+    # Matches:
+    #   hello, hello-world
+    #
+    # Does not Match:
+    #   hello world!, hello_world
     class AlphaDashValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
         return nil if value.blank?
