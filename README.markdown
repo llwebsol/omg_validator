@@ -6,11 +6,8 @@ OmgValidator is a collection of custom validators for Rails 3.x. These are simpl
 * Alphanumeric characters
 * Alpha characters
 * Dates
-* Decimal numbers
 * Email addresses
-* Integer numbers
 * IP addresses
-* Numeric characters
 * US and Canadian (or compatible) Phone numbers
 * US and Canadian (or compatible) Postal/Zip Codes
 * Strong passwords
@@ -25,9 +22,7 @@ Run bundle install and then use them in your models. For example:
 
   validates :postal_code, postal_or_zip_code: true
 
-Think of this package as a swiss army knife for your validation needs. It larges replaces the need to use validates_format_of validation helper method. 
-
-The decimal, integer, and numeric validators do overlap with functionality in the validates_numericality_of validation helper method. We have kept these in the gem however, as we personally find them easier to use. The validates_numericality_of method is still immensely useful for more complex numeric validations.
+Think of this package as a swiss army knife for your validation needs. It larges replaces the need to use validates_format_of validation helper method.
 
 ### Contributors
 
