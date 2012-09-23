@@ -1,30 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>omg_validator by llwebsol</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="omg_validator : A fine collection of validators for active model" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>omg_validator</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>omg_validator</h1>
-        <p>A fine collection of validators for active model</p>
-        <p class="view"><a href="https://github.com/llwebsol/omg_validator">View the Project on GitHub <small>llwebsol/omg_validator</small></a></p>
-        <ul>
-          <li><a href="https://github.com/llwebsol/omg_validator/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/llwebsol/omg_validator/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/llwebsol/omg_validator">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/llwebsol/omg_validator">View on GitHub</a>
+
+          <h1 id="project_title">omg_validator</h1>
+          <h2 id="project_tagline">A fine collection of validators for active model</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/llwebsol/omg_validator/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/llwebsol/omg_validator/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>OmgValidator</h1>
 
 <p>OmgValidator is a collection of custom validators for Rails 3.x. These are simple validators that mostly use regular expressions for common validation requirements, including:</p>
@@ -34,11 +40,8 @@
 <li>Alphanumeric characters</li>
 <li>Alpha characters</li>
 <li>Dates</li>
-<li>Decimal numbers</li>
 <li>Email addresses</li>
-<li>Integer numbers</li>
 <li>IP addresses</li>
-<li>Numeric characters</li>
 <li>US and Canadian (or compatible) Phone numbers</li>
 <li>US and Canadian (or compatible) Postal/Zip Codes</li>
 <li>Strong passwords</li>
@@ -46,15 +49,13 @@
 <li>US (or compatible) Zip Code</li>
 </ul><p>Using the gem is easy. Just add it to your gemfile.</p>
 
-<p>gem "omg_validator", "~&gt; 0.0.8"</p>
+<p>gem "omg_validator", "~&gt; 1.0.0"</p>
 
 <p>Run bundle install and then use them in your models. For example:</p>
 
 <p>validates :postal_code, postal_or_zip_code: true</p>
 
-<p>Think of this package as a swiss army knife for your validation needs. It larges replaces the need to use validates_format_of validation helper method. </p>
-
-<p>The decimal, integer, and numeric validators do overlap with functionality in the validates_numericality_of validation helper method. We have kept these in the gem however, as we personally find them easier to use. The validates_numericality_of method is still immensely useful for more complex numeric validations.</p>
+<p>Think of this package as a swiss army knife for your validation needs. It larges replaces the need to use validates_format_of validation helper method.</p>
 
 <h3>Contributors</h3>
 
@@ -79,12 +80,17 @@
 
 <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/llwebsol">llwebsol</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">omg_validator maintained by <a href="https://github.com/llwebsol">llwebsol</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
